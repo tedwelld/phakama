@@ -35,9 +35,9 @@ export const siteConfig = {
   ],
   bottomNavLinks: [
     { label: "Home", href: "/", icon: "pi-home" },
-    { label: "About", href: "/about", icon: "pi-info-circle" },
     { label: "Awareness", href: "/breast-cancer-awareness", icon: "pi-heart" },
     { label: "Programs", href: "/programs", icon: "pi-th-large" },
+    { label: "About", href: "/about", icon: "pi-info-circle" },
     { label: "Contact", href: "/contact", icon: "pi-envelope" },
   ],
   bottomNavMoreLinks: [
