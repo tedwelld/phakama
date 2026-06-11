@@ -1,13 +1,15 @@
 # Phakama Women's Organization Website
 
-A professional, responsive website for **Phakama Women's Organization** — focused on women's health, breast cancer awareness, education, and community outreach.
+A professional, responsive website for **Phakama Women's Organization** — built with the TWT architecture pattern, featuring smooth scroll, editorial typography, dark/light theme, and pink/purple branding.
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org/) (App Router)
-- [React](https://react.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- [Next.js](https://nextjs.org/) 16 (App Router, `src/` directory)
+- [React](https://react.dev/) 19
+- [Tailwind CSS](https://tailwindcss.com/) v4
 - [TypeScript](https://www.typescriptlang.org/)
+- [Framer Motion](https://www.framer.com/motion/) + [GSAP](https://gsap.com/) + [Lenis](https://github.com/darkroomengineering/lenis) for animations
+- [Nodemailer](https://nodemailer.com/) + [Zod](https://zod.dev/) for contact form email API
 
 ## Pages
 
@@ -19,7 +21,7 @@ A professional, responsive website for **Phakama Women's Organization** — focu
 | `/womens-health` | Women's Health |
 | `/programs` | Programs & Campaigns |
 | `/get-involved` | Get Involved |
-| `/contact` | Contact Us |
+| `/contact` | Contact Us (with email form) |
 
 ## Getting Started
 
@@ -37,6 +39,29 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+## Email Configuration
+
+The contact form sends emails via SMTP. Configure credentials using environment variables or `appsettings.json`:
+
+| Variable | Description |
+|----------|-------------|
+| `EMAIL_HOST` | SMTP host |
+| `EMAIL_PORT` | SMTP port (default: 587) |
+| `EMAIL_USERNAME` | SMTP username |
+| `EMAIL_PASSWORD` | SMTP password |
+| `ADMIN_EMAIL` | Admin recipient (default: admin@phakamawomens.org) |
+| `EMAIL_SECURE` | Set to `true` for port 465 |
+
+Example `.env.local`:
+
+```env
+EMAIL_HOST=smtp.example.com
+EMAIL_PORT=587
+EMAIL_USERNAME=admin@phakamawomens.org
+EMAIL_PASSWORD=your-password
+ADMIN_EMAIL=admin@phakamawomens.org
+```
+
 ## Build for Production
 
 ```bash
@@ -48,23 +73,31 @@ npm start
 
 - **Email:** admin@phakamawomens.org
 - **Phone:** +263 779 945 479
+- **WhatsApp:** +263 779 945 479
 
 ## Project Structure
 
 ```
-├── app/                  # Next.js App Router pages
-├── components/           # Reusable UI components
-├── lib/                  # Shared constants and utilities
-├── public/images/        # Static images (placeholders for now)
+├── src/
+│   ├── app/              # Next.js pages, API routes, globals.css
+│   ├── components/       # Layout, home sections, shared UI, forms
+│   ├── contexts/         # Theme provider (phakama-theme)
+│   ├── data/             # Site config and content data
+│   ├── hooks/            # useNavbarScroll, useMediaQuery
+│   └── lib/              # Utilities, mailer
+├── public/images/        # Placeholder SVG images
+├── appsettings.json      # Email settings fallback
 └── README.md
 ```
 
-## Next Steps
+## Features
 
-- Replace placeholder images in `public/images/` with real campaign photos
-- Connect the contact form to an email service (e.g. Resend, Formspree)
-- Add social media links when available
-- Deploy to [Vercel](https://vercel.com) or your preferred host
+- Dark default theme with light mode toggle (stored in `localStorage` as `phakama-theme`)
+- Centered-logo navbar with full-screen mobile drawer
+- Lenis smooth scroll + GSAP hero animations
+- Contact form with admin notification + auto-reply emails
+- SEO: `robots.ts` and `sitemap.ts` for all 7 routes
+- Floating WhatsApp button
 
 ## License
 
