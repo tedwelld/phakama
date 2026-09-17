@@ -5,7 +5,7 @@ import { siteImages } from "@/data/images";
 
 const pillars = [
   {
-    image: siteImages.awareness,
+    image: siteImages.awarenessPortrait,
     category: "Awareness",
     title: "Breast Cancer Education",
     description:
@@ -13,7 +13,7 @@ const pillars = [
     href: "/breast-cancer-awareness",
   },
   {
-    image: siteImages.community,
+    image: siteImages.discussion,
     category: "Health",
     title: "Women's Wellness",
     description:
@@ -21,7 +21,7 @@ const pillars = [
     href: "/womens-health",
   },
   {
-    image: siteImages.programs,
+    image: siteImages.support,
     category: "Outreach",
     title: "Community Programs",
     description:

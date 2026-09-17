@@ -15,12 +15,12 @@ export const metadata: Metadata = {
 };
 
 const topicImages = [
-  siteImages.awareness,
-  siteImages.community,
-  siteImages.hero,
-  siteImages.programs,
-  siteImages.awareness,
-  siteImages.community,
+  siteImages.awarenessPortrait,
+  siteImages.discussion,
+  siteImages.support,
+  siteImages.nutrition,
+  siteImages.clinic,
+  siteImages.gathering,
 ];
 
 export default function WomensHealthPage() {

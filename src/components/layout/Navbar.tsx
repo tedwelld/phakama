@@ -111,7 +111,7 @@ export default function Navbar() {
         }`}
       >
         <nav className="container-luxury relative flex h-20 items-center">
-          <div className="hidden flex-1 items-center justify-end gap-8 pr-8 lg:flex xl:gap-10 xl:pr-10">
+          <div className="hidden flex-1 items-center justify-end gap-4 pr-5 lg:flex xl:gap-8 xl:pr-8">
             {leftLinks.map((link) => (
               <NavLink
                 key={link.href}
@@ -127,10 +127,10 @@ export default function Navbar() {
             href="/"
             className="absolute left-1/2 flex-shrink-0 -translate-x-1/2 lg:static lg:translate-x-0"
           >
-            <Logo layout="stacked" className="scale-[0.85] lg:scale-100" />
+            <Logo layout="stacked" />
           </Link>
 
-          <div className="hidden flex-1 items-center justify-start gap-8 pl-8 lg:flex xl:gap-10 xl:pl-10">
+          <div className="hidden flex-1 items-center justify-start gap-4 pl-5 lg:flex xl:gap-8 xl:pl-8">
             {rightLinks.map((link) => (
               <NavLink
                 key={link.href}

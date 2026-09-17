@@ -8,6 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/breast-cancer-awareness",
     "/womens-health",
     "/programs",
+    "/updates",
+    "/gallery",
     "/get-involved",
     "/contact",
   ];

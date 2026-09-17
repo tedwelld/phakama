@@ -65,6 +65,15 @@ export default function ProgramsPage() {
       </SectionWrapper>
 
       <SectionWrapper background="dark">
+        <div className="mb-14 border-l-2 border-[var(--accent)] pl-6">
+          <SectionLabel>From our region</SectionLabel>
+          <h2 className="mb-4 font-display text-3xl text-[var(--fg)]">Awareness in and around Dete</h2>
+          <p className="mb-5 max-w-2xl leading-relaxed text-[var(--fg-70)]">Read published reports about Phakama and community initiatives across Dete, Hwange, and Matabeleland North, or explore moments from our photo collection.</p>
+          <div className="flex flex-wrap gap-6 text-sm text-[var(--accent)]">
+            <Link href="/updates" className="hover:underline">Read community updates →</Link>
+            <Link href="/gallery" className="hover:underline">Explore the gallery →</Link>
+          </div>
+        </div>
         <ScrollReveal className="mb-12">
           <SectionLabel>Outreach</SectionLabel>
           <h2 className="text-4xl text-[var(--fg)]" style={{ fontFamily: "var(--font-display)" }}>

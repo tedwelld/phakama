@@ -34,8 +34,8 @@ export default function HeroSection() {
   return (
     <section className="relative flex h-screen min-h-[600px] items-center justify-center overflow-hidden">
       <SiteImage
-        src={siteImages.hero}
-        alt="Phakama Women's Organization community"
+        src={siteImages.homepage}
+        alt="Community group gathered at Hwange Safari Lodge"
         fill
         className="object-cover"
         priority

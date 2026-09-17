@@ -39,6 +39,10 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   metadataBase: new URL(siteConfig.url),
   alternates: { canonical: "/" },
+  icons: {
+    icon: { url: "/images/phakama-logo.png", type: "image/png", sizes: "1254x1254" },
+    apple: { url: "/images/phakama-logo.png", type: "image/png", sizes: "1254x1254" },
+  },
   openGraph: {
     type: "website",
     url: siteConfig.url,
@@ -46,6 +50,13 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     locale: "en_US",
+    images: [{ url: "/images/phakama-logo.png", width: 1254, height: 1254, alt: siteConfig.name }],
+  },
+  twitter: {
+    card: "summary",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: ["/images/phakama-logo.png"],
   },
 };
 

@@ -22,7 +22,7 @@ export default function PageHero({
         alt={imageAlt ?? label}
         fill
         className="object-cover"
-        priority
+        preload
         sizes="100vw"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/80" />

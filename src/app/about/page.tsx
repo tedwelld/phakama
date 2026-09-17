@@ -55,10 +55,10 @@ export default function AboutPage() {
           <ScrollReveal direction="right" delay={0.1}>
             <div className="relative h-[420px] overflow-hidden rounded-sm">
               <SiteImage
-                src={siteImages.awareness}
-                alt="Women's health awareness session"
+                src={siteImages.awarenessPortrait}
+                alt="Women wearing breast cancer awareness shirts at a gathering"
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>

@@ -1,0 +1,58 @@
+import { siteImages } from "./images";
+
+// These dates are publication dates, not inferred dates of the supplied photographs.
+// Regional reports must not be presented as campaigns organised by Phakama.
+export const communityUpdates = [
+  {
+    slug: "dete-youth-clubs-2026",
+    title: "Life skills and mentorship return to Dete school clubs",
+    category: "Regional update",
+    location: "Dete, Matabeleland North",
+    published: "2026-03-03",
+    dateLabel: "3 March 2026",
+    summary: "Tikobane Trust reported the start of a new term of Boys & Girls Clubs in the Dete area, bringing life skills, leadership, and mentorship sessions back to schools. The update also describes safeguarding training for facilitators.",
+    image: siteImages.gathering,
+    imageAlt: "Participants gathered around a table for a community conversation",
+    source: "Tikobane Trust",
+    sourceUrl: "https://www.tikobanezimbabwe.org/our-work/youth-and-children",
+  },
+  {
+    slug: "hwange-breast-cancer-awareness-2025",
+    title: "Hwange women come together for breast cancer awareness",
+    category: "Regional campaign",
+    location: "Makwika, Hwange",
+    published: "2025-11-03",
+    dateLabel: "3 November 2025",
+    summary: "VicFallsLive reported that women from across Hwange Central gathered in Makwika Ward 15 for a belated Breast Cancer Awareness Month event. The session covered cancer awareness and the importance of seeking medical help, with participants pledging to continue community education.",
+    image: siteImages.awarenessPortrait,
+    imageAlt: "Women wearing breast cancer awareness shirts beneath a canopy",
+    source: "VicFallsLive",
+    sourceUrl: "https://vicfallslive.co.zw/hwange-women-unite-against-breast-cancer/",
+  },
+  {
+    slug: "phakama-dete-support-group-2024",
+    title: "Phakama’s grassroots health support in Dete",
+    category: "Phakama in the news",
+    location: "Dete and Hwange",
+    published: "2024-03-15",
+    dateLabel: "15 March 2024",
+    summary: "Community Podium profiled the Phakama Support Group, founded by nurse Gladys Muchimba in June 2023. The report describes health education, counselling, and referrals for women in Dete, alongside the organisation of breast and cervical screening at Hwange Colliery Hospital.",
+    image: siteImages.awareness,
+    imageAlt: "A speaker addressing a community gathering seated beneath a tree",
+    source: "Community Podium News",
+    sourceUrl: "https://communitypodiumnews.org.zw/dete-nurse-leads-fight-against-cancer-in-rural-community/",
+  },
+  {
+    slug: "dete-youth-health-awareness-2023",
+    title: "Peer support and menstrual health awareness in Dete",
+    category: "Regional awareness",
+    location: "Dete, Matabeleland North",
+    published: "2023-09-18",
+    dateLabel: "18 September 2023",
+    summary: "A Chronicle report highlighted Tikobane Conservation Club’s work with young people in Dete. Activities included menstrual hygiene awareness, mentoring, and group outings, with local health personnel helping young people make informed choices.",
+    image: siteImages.community,
+    imageAlt: "A community group seated outside a house for a discussion",
+    source: "Chronicle / Herald Online",
+    sourceUrl: "https://www.heraldonline.co.zw/tikobane-conservation-club-fights-teen-pregnancies-and-drug-abuse-in-dete/",
+  },
+] as const;

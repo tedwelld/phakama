@@ -51,24 +51,3 @@ export const outreachActivities = [
   "School, church, and community health talks",
   "Volunteer-led support and awareness activities",
 ];
-
-export const campaigns = [
-  {
-    title: "Breast Cancer Awareness Month",
-    description:
-      "Join us as we raise awareness, share life-saving information, and encourage women to prioritize screening.",
-    href: "/programs",
-  },
-  {
-    title: "Women's Wellness Week",
-    description:
-      "A week of workshops covering mental health, nutrition, reproductive wellness, and preventive care.",
-    href: "/womens-health",
-  },
-  {
-    title: "Community Health Talks",
-    description:
-      "Invite Phakama to your school, church, or workplace for an educational health session.",
-    href: "/contact",
-  },
-];

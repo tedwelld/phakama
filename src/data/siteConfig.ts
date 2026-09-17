@@ -27,10 +27,11 @@ export const siteConfig = {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Awareness", href: "/breast-cancer-awareness" },
+    { label: "Updates", href: "/updates" },
   ],
   rightNavLinks: [
     { label: "Programs", href: "/programs" },
-    { label: "Get Involved", href: "/get-involved" },
+    { label: "Gallery", href: "/gallery" },
     { label: "Contact", href: "/contact" },
   ],
   bottomNavLinks: [
@@ -41,10 +42,15 @@ export const siteConfig = {
     { label: "Contact", href: "/contact", icon: "pi-envelope" },
   ],
   bottomNavMoreLinks: [
+    { label: "Updates", href: "/updates" },
+    { label: "Gallery", href: "/gallery" },
     { label: "Women's Health", href: "/womens-health" },
     { label: "Get Involved", href: "/get-involved" },
   ],
   footerQuickLinks: [
+    { label: "Updates", href: "/updates" },
+    { label: "Gallery", href: "/gallery" },
+    { label: "Get Involved", href: "/get-involved" },
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Breast Cancer Awareness", href: "/breast-cancer-awareness" },

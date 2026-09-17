@@ -23,7 +23,7 @@ export default function SectionWrapper({
   return (
     <section
       id={id}
-      className={`${bgMap[background]} transition-colors duration-400 ${noPadding ? "" : "section-padding"} ${className}`}
+      className={`${bgMap[background]} overflow-x-clip transition-colors duration-400 ${noPadding ? "" : "section-padding"} ${className}`}
     >
       <div className="container-luxury">{children}</div>
     </section>
