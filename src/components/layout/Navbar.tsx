@@ -125,7 +125,7 @@ export default function Navbar() {
 
           <Link
             href="/"
-            className="absolute left-1/2 flex-shrink-0 -translate-x-1/2 lg:static lg:translate-x-0"
+            className="flex-shrink-0"
           >
             <Logo layout="stacked" />
           </Link>
