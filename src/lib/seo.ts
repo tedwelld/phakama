@@ -37,7 +37,7 @@ export const organizationStructuredData = {
       alternateName: "Phakama Women's Organisation",
       url: siteConfig.url,
       description: siteConfig.description,
-      logo: `${siteConfig.url}/images/phakama-womens-logo-638d84bf.png`,
+      logo: `${siteConfig.url}/images/phakama-logo-blue-black-white-v2.png`,
       email: siteConfig.email,
       telephone: siteConfig.phone,
       areaServed: { "@type": "Place", name: "Hwange district, Zimbabwe" },

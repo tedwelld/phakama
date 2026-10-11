@@ -55,8 +55,8 @@ export const ADMIN_EMAILS = [...new Set(
 
 export const REF_LINK = process.env.EMAIL_REF_LINK || cfg?.RefLink || "https://www.phakamawomens.org";
 export const LOGO_ATTACHMENT = {
-  filename: "phakama-womens-logo-638d84bf.png",
-  path: path.join(process.cwd(), "public", "images", "phakama-womens-logo-638d84bf.png"),
+  filename: "phakama-logo-blue-black-white-v2.png",
+  path: path.join(process.cwd(), "public", "images", "phakama-logo-blue-black-white-v2.png"),
   cid: "phakama-logo@phakamawomens.org",
   contentType: "image/png",
   contentDisposition: "inline" as const,

@@ -51,8 +51,8 @@ export const metadata: Metadata = {
       : undefined,
   },
   icons: {
-    icon: { url: "/images/phakama-womens-logo-638d84bf.png", type: "image/png", sizes: "1536x1024" },
-    apple: { url: "/images/phakama-womens-logo-638d84bf.png", type: "image/png", sizes: "1536x1024" },
+    icon: { url: "/images/phakama-logo-blue-black-white-v2.png", type: "image/png", sizes: "1536x1024" },
+    apple: { url: "/images/phakama-logo-blue-black-white-v2.png", type: "image/png", sizes: "1536x1024" },
   },
   openGraph: {
     type: "website",
@@ -61,13 +61,13 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     locale: "en_ZW",
-    images: [{ url: "/images/phakama-womens-logo-638d84bf.png", width: 1536, height: 1024, alt: siteConfig.name }],
+    images: [{ url: "/images/phakama-logo-blue-black-white-v2.png", width: 1536, height: 1024, alt: siteConfig.name }],
   },
   twitter: {
     card: "summary",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ["/images/phakama-womens-logo-638d84bf.png"],
+    images: ["/images/phakama-logo-blue-black-white-v2.png"],
   },
 };
 

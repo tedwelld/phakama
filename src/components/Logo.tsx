@@ -12,7 +12,7 @@ export default function Logo({ layout = "horizontal", className }: LogoProps) {
   return (
     <span className={cn("inline-flex shrink-0 items-center gap-3", className)}>
     <Image
-      src="/images/phakama-womens-logo-638d84bf.png"
+      src="/images/phakama-logo-blue-black-white-v2.png"
       alt="Phakama Women's Organization"
       width={1536}
       height={1024}
