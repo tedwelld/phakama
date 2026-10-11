@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import CommunityInvitation from "@/components/shared/CommunityInvitation";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -9,11 +10,7 @@ import { waysToHelp } from "@/data/getInvolved";
 import { siteConfig } from "@/data/siteConfig";
 import { siteImages } from "@/data/images";
 
-export const metadata: Metadata = {
-  title: "Get Involved",
-  description:
-    "Volunteer, partner, donate, or become a community ambassador with Phakama Women's Organization.",
-};
+export const metadata = pageMetadata("/get-involved");
 
 export default function GetInvolvedPage() {
   const waHref = `https://wa.me/${siteConfig.whatsappNumber.replace(/\D/g, "")}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`;
@@ -43,7 +40,7 @@ export default function GetInvolvedPage() {
           </h2>
           <p className="max-w-3xl text-lg leading-relaxed text-[var(--fg-70)]">
             Every contribution — whether time, partnership, or resources — helps us reach more
-            women with life-saving health information and community support.
+            women through community meetings, clean-up campaigns, wellbeing activities and awareness.
           </p>
         </ScrollReveal>
       </SectionWrapper>
@@ -78,7 +75,7 @@ export default function GetInvolvedPage() {
               Ready to partner with us?
             </h2>
             <p className="mx-auto mb-10 max-w-lg text-white/70">
-              Reach out to discuss volunteering, partnerships, or hosting a health talk.
+              Tell us how you would like to help: volunteer at a gathering, support a clean-up campaign, contribute resources or collaborate on awareness.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
@@ -99,6 +96,9 @@ export default function GetInvolvedPage() {
           </ScrollReveal>
         </div>
       </section>
+      <CommunityInvitation title="Turn your interest into a conversation." href="/contact" label="Tell us how you would like to help">
+        <p>Let us know which initiative interests you, where you are based and what time, skills or resources you can offer. We can then discuss a practical way to participate. Schools, community groups and businesses are welcome to explore collaboration too.</p>
+      </CommunityInvitation>
     </>
   );
 }

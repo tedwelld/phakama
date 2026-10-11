@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import CommunityInvitation from "@/components/shared/CommunityInvitation";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -8,11 +9,7 @@ import SiteImage from "@/components/shared/SiteImage";
 import { values } from "@/data/getInvolved";
 import { siteImages } from "@/data/images";
 
-export const metadata: Metadata = {
-  title: "About Us",
-  description:
-    "Learn about Phakama Women's Organization — our mission, vision, values, and commitment to women's health and breast cancer awareness in Zimbabwe.",
-};
+export const metadata = pageMetadata("/about");
 
 export default function AboutPage() {
   return (
@@ -37,26 +34,21 @@ export default function AboutPage() {
           <ScrollReveal>
             <SectionLabel>Our Story</SectionLabel>
             <h2 className="mb-8 text-4xl text-[var(--fg)]" style={{ fontFamily: "var(--font-display)" }}>
-              Focused on women&apos;s health
+              Women at the heart of community
             </h2>
             <p className="mb-6 leading-relaxed text-[var(--fg-70)]">
-              Phakama Women&apos;s Organization was founded with a simple but powerful purpose: to
-              help women access reliable health information and feel supported in their wellness
-              journey. We focus especially on breast cancer awareness, early detection education,
-              and community outreach.
+              Phakama Women&apos;s Organization is a community-based group in Hwange district, Zimbabwe. Our purpose is to support women&apos;s wellbeing through connection, participation and care for the communities where women live.
             </p>
             <p className="leading-relaxed text-[var(--fg-60)]">
-              Through workshops, awareness campaigns, and one-on-one support, we work to break down
-              barriers to health knowledge and encourage women to prioritize preventive care and
-              regular check-ups.
+              Our initiatives include annual meetings across the district, clean-up campaigns and awareness activities. Breast cancer awareness remains part of this wider commitment: a community where women feel informed, included and supported.
             </p>
           </ScrollReveal>
 
           <ScrollReveal direction="right" delay={0.1}>
             <div className="relative h-[420px] overflow-hidden rounded-sm">
               <SiteImage
-                src={siteImages.awarenessPortrait}
-                alt="Women wearing breast cancer awareness shirts at a gathering"
+                src={siteImages.gathering}
+                alt="Community members gathered for a conversation"
                 fill
                 className="object-contain"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -75,8 +67,7 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="leading-relaxed text-[var(--fg-60)]">
-                To educate, support, and empower women through health awareness, early detection
-                education, and community-based support programs.
+                To bring women together, support their wellbeing and encourage active participation through community meetings, practical local action and awareness.
               </p>
             </div>
           </ScrollReveal>
@@ -87,8 +78,7 @@ export default function AboutPage() {
                 Our Vision
               </h2>
               <p className="leading-relaxed text-[var(--fg-60)]">
-                To build a healthier, informed, and empowered community of women who have access to
-                reliable health information and support.
+                A connected Hwange district where women feel valued, have a voice in community life and can find support for their wellbeing.
               </p>
             </div>
           </ScrollReveal>
@@ -135,6 +125,9 @@ export default function AboutPage() {
           </ScrollReveal>
         </div>
       </SectionWrapper>
+      <CommunityInvitation title="Local roots. A shared purpose." href="/updates" label="Explore our community stories">
+        <p>Our work connects three everyday priorities: bringing women together, caring for shared surroundings and keeping wellbeing in the conversation. Annual meetings, clean-up campaigns and awareness activities give that purpose a practical expression.</p>
+      </CommunityInvitation>
     </>
   );
 }

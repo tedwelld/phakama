@@ -1,8 +1,6 @@
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import SectionLabel from "@/components/ui/SectionLabel";
 import ScrollReveal from "@/components/shared/ScrollReveal";
-import AnimatedCounter from "@/components/shared/AnimatedCounter";
-import { siteConfig } from "@/data/siteConfig";
 
 export default function BrandIntroSection() {
   return (
@@ -17,26 +15,20 @@ export default function BrandIntroSection() {
             Empowering women
             <br />
             <span className="text-[var(--accent)] italic" style={{ fontFamily: "var(--font-editorial)" }}>
-              through health awareness.
+              through community action.
             </span>
           </h2>
           <p className="mb-6 text-lg leading-relaxed text-[var(--fg-70)]">
-            Phakama Women&apos;s Organization is dedicated to educating, supporting, and
-            empowering women through breast cancer awareness, women&apos;s health education,
-            and community outreach across Zimbabwe.
+            Phakama Women&apos;s Organization is a community-based group supporting women&apos;s wellbeing in Hwange district, Zimbabwe. We bring women together to connect, participate and care for the communities they call home.
           </p>
           <p className="text-base leading-relaxed text-[var(--fg-60)]">
-            Through workshops, awareness campaigns, and one-on-one support, we help women
-            access reliable health information and feel confident in prioritizing preventive
-            care and regular check-ups.
+            From annual meetings across the district to clean-up campaigns and awareness activities, our work puts community at the centre. Breast cancer awareness remains an important part of our broader commitment to women&apos;s wellbeing.
           </p>
         </ScrollReveal>
 
         <ScrollReveal direction="right" delay={0.1}>
           <div className="grid grid-cols-2 gap-8">
-            {siteConfig.counters.map((c) => (
-              <AnimatedCounter key={c.label} end={c.end} label={c.label} suffix={c.suffix} />
-            ))}
+            {[["Connect", "Annual meetings across Hwange district"], ["Care", "Clean-up campaigns and shared spaces"], ["Learn", "Women’s wellbeing and awareness"], ["Participate", "Community action, together"]].map(([title, text]) => (<div key={title} className="border-t border-[var(--accent)]/40 pt-5"><h3 className="mb-3 font-display text-3xl text-[var(--accent)]">{title}</h3><p className="text-sm leading-relaxed text-[var(--fg-70)]">{text}</p></div>))}
           </div>
         </ScrollReveal>
       </div>

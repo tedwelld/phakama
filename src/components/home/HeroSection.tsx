@@ -41,7 +41,7 @@ export default function HeroSection() {
         priority
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/80" />
 
       <div className="relative z-10 container-luxury px-4 text-center">
         <motion.p
@@ -58,7 +58,7 @@ export default function HeroSection() {
           className="mb-6 text-5xl leading-none text-white sm:text-7xl md:text-8xl lg:text-9xl"
           style={{ fontFamily: "var(--font-display)", fontWeight: 500 }}
         >
-          Raising Awareness. Inspiring Hope.
+          Stronger women. Stronger communities.
         </h1>
 
         <motion.p
@@ -68,7 +68,7 @@ export default function HeroSection() {
           className="mx-auto mb-12 max-w-xl text-lg text-white/80 md:text-xl"
           style={{ fontFamily: "var(--font-editorial)", fontStyle: "italic" }}
         >
-          {siteConfig.tagline}
+          Phakama brings women together across Hwange district through community meetings, clean-up campaigns and a shared commitment to wellbeing.
         </motion.p>
 
         <motion.div
@@ -78,16 +78,16 @@ export default function HeroSection() {
           className="flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <Link
-            href="/breast-cancer-awareness"
+            href="/programs"
             className="min-w-[200px] rounded bg-[var(--accent)] px-8 py-4 text-center text-sm font-semibold tracking-wide text-white hover:bg-[var(--accent-hover)]"
           >
-            Learn About Breast Cancer
+            Explore Our Initiatives
           </Link>
           <Link
-            href="/contact"
+            href="/get-involved"
             className="min-w-[200px] rounded border border-white/40 px-8 py-4 text-center text-sm tracking-wide text-white hover:border-white hover:bg-white/5"
           >
-            Contact Us
+            Be Part of Our Community
           </Link>
         </motion.div>
       </div>

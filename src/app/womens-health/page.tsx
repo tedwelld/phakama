@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import CommunityInvitation from "@/components/shared/CommunityInvitation";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -8,11 +9,7 @@ import CinematicCard from "@/components/shared/CinematicCard";
 import { healthTopics } from "@/data/healthTopics";
 import { siteImages } from "@/data/images";
 
-export const metadata: Metadata = {
-  title: "Women's Health",
-  description:
-    "Explore women's health topics including wellness, reproductive health, mental health, nutrition, and preventive care.",
-};
+export const metadata = pageMetadata("/womens-health");
 
 const topicImages = [
   siteImages.awarenessPortrait,
@@ -100,6 +97,9 @@ export default function WomensHealthPage() {
           </ScrollReveal>
         </div>
       </SectionWrapper>
+      <CommunityInvitation title="Wellbeing belongs in everyday community life." href="/programs" label="Discover our community initiatives">
+        <p>A sense of belonging, the spaces we share and opportunities to participate all matter to our vision for women’s wellbeing. Our annual meetings and community initiatives sit alongside health awareness as ways to bring women together.</p>
+      </CommunityInvitation>
     </>
   );
 }

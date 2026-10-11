@@ -10,7 +10,7 @@ import { programs } from "@/data/programs";
 
 export default function ProgramsPreviewSection() {
   const featured = programs[0];
-  const others = programs.slice(1);
+  const others = programs.slice(1, 5);
 
   return (
     <SectionWrapper id="programs" background="charcoal">
@@ -86,7 +86,7 @@ function ProgramCard({
         </h3>
         <motion.div
           variants={{ hover: { opacity: 1, y: 0 } }}
-          initial={{ opacity: 0, y: 8 }}
+          initial={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
           <Link

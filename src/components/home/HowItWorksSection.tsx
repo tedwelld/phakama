@@ -7,9 +7,9 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 const steps = [
   {
     number: "01",
-    title: "Educate",
+    title: "Connect",
     description:
-      "We share clear, accessible health information through talks, workshops, and awareness campaigns in communities.",
+      "We bring women together through annual meetings across Hwange district, making space for community connection and participation.",
     icon: <i className="pi pi-book" style={{ fontSize: "40px" }} />,
   },
   {
@@ -23,7 +23,7 @@ const steps = [
     number: "03",
     title: "Empower",
     description:
-      "We help women take informed action — from self-awareness to professional screening and preventive care.",
+      "We invite women to play an active role in community life through clean-up campaigns, awareness activities and shared responsibility.",
     icon: <i className="pi pi-verified" style={{ fontSize: "40px" }} />,
   },
 ];
@@ -37,7 +37,7 @@ export default function HowItWorksSection() {
           className="mb-16 max-w-lg text-4xl text-[var(--fg)] md:text-5xl"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Educate. Support. Empower.
+          Connect. Support. Empower.
         </h2>
       </ScrollReveal>
 

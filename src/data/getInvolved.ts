@@ -2,12 +2,12 @@ export const waysToHelp = [
   {
     title: "Become a Volunteer",
     description:
-      "Share your time and skills at awareness events, outreach programs, and community health talks.",
+      "Help with meeting preparations, community clean-up activities or awareness events. Tell us your interests and availability so we can discuss a role.",
   },
   {
     title: "Partner With Us",
     description:
-      "Health organizations, schools, churches, and businesses can collaborate on awareness initiatives.",
+      "Local businesses, schools, churches and community groups can discuss venues, materials and practical support for Phakama’s initiatives.",
   },
   {
     title: "Support Awareness Campaigns",
@@ -17,7 +17,7 @@ export const waysToHelp = [
   {
     title: "Donate Resources",
     description:
-      "Contribute materials, funding, or in-kind support to help us reach more women and families.",
+      "Ask about contributing clean-up supplies, meeting materials, transport or in-kind support. Contact the team to agree what is needed before donating.",
   },
   {
     title: "Invite Us for a Health Talk",
@@ -42,7 +42,7 @@ export const values = [
   },
   {
     title: "Empowerment",
-    description: "We help women make informed decisions about their health.",
+    description: "We encourage women to make informed choices and take part in shaping community life.",
   },
   {
     title: "Community",

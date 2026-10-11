@@ -5,12 +5,12 @@ import { siteImages } from "@/data/images";
 
 const pillars = [
   {
-    image: siteImages.awarenessPortrait,
-    category: "Awareness",
-    title: "Breast Cancer Education",
+    image: siteImages.gathering,
+    category: "Connection",
+    title: "Women Coming Together",
     description:
-      "Signs, symptoms, myths vs facts, and self-exam guidance — empowering women with life-saving knowledge.",
-    href: "/breast-cancer-awareness",
+      "Annual meetings across Hwange district bring women together around community life, shared concerns and wellbeing.",
+    href: "/updates#annual-meetings",
   },
   {
     image: siteImages.discussion,
@@ -25,7 +25,7 @@ const pillars = [
     category: "Outreach",
     title: "Community Programs",
     description:
-      "School talks, church health sessions, and neighborhood outreach bringing education where women live and work.",
+      "Clean-up campaigns and local participation put care for our communities into action.",
     href: "/programs",
   },
 ];
@@ -40,7 +40,7 @@ export default function ThreePillarsSection() {
             className="max-w-lg text-4xl text-[var(--fg)] md:text-5xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Awareness. Health. Community.
+            Connection. Wellbeing. Community.
           </h2>
         </ScrollReveal>
 

@@ -7,6 +7,7 @@ export default function WhatsAppButton() {
   const href = `https://wa.me/${siteConfig.whatsappNumber.replace(/\D/g, "")}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`;
 
   return (
+    <>
     <motion.a
       href={href}
       target="_blank"
@@ -16,10 +17,18 @@ export default function WhatsAppButton() {
       transition={{ type: "spring", stiffness: 260, damping: 20, delay: 1.5 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className="fixed right-6 bottom-[calc(5.5rem+env(safe-area-inset-bottom,0px))] z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-xl shadow-black/30 lg:bottom-8 lg:right-8"
+      className="mobile-contact-button mobile-contact-whatsapp fixed z-50 flex h-11 w-11 items-center justify-center rounded-full border border-[var(--fg-10)] bg-[var(--bg)]/95 text-[var(--accent)] shadow-lg backdrop-blur-md lg:right-8 lg:bottom-8 lg:h-14 lg:w-14 lg:border-0 lg:bg-[#25D366] lg:text-white"
       aria-label="Chat on WhatsApp"
     >
-      <i className="pi pi-whatsapp text-white" style={{ fontSize: "26px" }} />
+      <i className="pi pi-whatsapp text-xl lg:text-2xl" aria-hidden="true" />
     </motion.a>
+    <a
+      href={`mailto:${siteConfig.email}`}
+      aria-label="Email Phakama"
+      className="mobile-contact-button mobile-contact-email fixed z-50 flex h-11 w-11 items-center justify-center rounded-full border border-[var(--fg-10)] bg-[var(--bg)]/95 text-[var(--accent)] shadow-lg backdrop-blur-md lg:hidden"
+    >
+      <i className="pi pi-envelope text-xl" aria-hidden="true" />
+    </a>
+    </>
   );
 }

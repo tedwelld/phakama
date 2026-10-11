@@ -1,32 +1,26 @@
 export const siteConfig = {
   name: "Phakama Women's Organization",
   shortName: "Phakama",
-  tagline: "Raising Awareness. Inspiring Hope. Supporting Women.",
+  tagline: "Women thriving. Communities growing. Together.",
   url: "https://www.phakamawomens.org",
   description:
-    "Empowering women through health awareness, breast cancer education, and community support in Zimbabwe.",
+    "A community-based women’s organisation in Hwange district, Zimbabwe, bringing women together through annual meetings, clean-up campaigns, wellbeing and health awareness.",
   email: "admin@phakamawomens.org",
   phone: "+263779945479",
   phoneDisplay: "+263 779 945 479",
   whatsappNumber: "+263779945479",
   whatsappMessage:
     "Hello Phakama Women's Organization, I would like to get in touch regarding your programs.",
-  location: "Zimbabwe",
+  location: "Hwange district, Zimbabwe",
   socials: {
     facebook: "https://facebook.com/phakamawomens",
     instagram: "https://instagram.com/phakamawomens",
     x: "https://x.com/phakamawomens",
   },
-  counters: [
-    { end: 50, label: "Community Talks", suffix: "+" },
-    { end: 12, label: "Awareness Campaigns", suffix: "+" },
-    { end: 5, label: "Years Serving", suffix: "+" },
-    { end: 1000, label: "Women Reached", suffix: "+" },
-  ],
   leftNavLinks: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Awareness", href: "/breast-cancer-awareness" },
+    { label: "Wellbeing", href: "/womens-health" },
     { label: "Updates", href: "/updates" },
   ],
   rightNavLinks: [
@@ -36,7 +30,7 @@ export const siteConfig = {
   ],
   bottomNavLinks: [
     { label: "Home", href: "/", icon: "pi-home" },
-    { label: "Awareness", href: "/breast-cancer-awareness", icon: "pi-heart" },
+    { label: "Wellbeing", href: "/womens-health", icon: "pi-heart" },
     { label: "Programs", href: "/programs", icon: "pi-th-large" },
     { label: "About", href: "/about", icon: "pi-info-circle" },
     { label: "Contact", href: "/contact", icon: "pi-envelope" },

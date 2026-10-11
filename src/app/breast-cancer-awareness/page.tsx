@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import CommunityInvitation from "@/components/shared/CommunityInvitation";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -8,11 +9,7 @@ import DisclaimerBanner from "@/components/shared/DisclaimerBanner";
 import { mythsAndFacts, selfExamSteps, symptoms } from "@/data/awareness";
 import { siteImages } from "@/data/images";
 
-export const metadata: Metadata = {
-  title: "Breast Cancer Awareness",
-  description:
-    "Learn about breast cancer signs, symptoms, myths vs facts, and self-exam guidance from Phakama Women's Organization.",
-};
+export const metadata = pageMetadata("/breast-cancer-awareness");
 
 export default function BreastCancerAwarenessPage() {
   return (
@@ -133,6 +130,9 @@ export default function BreastCancerAwarenessPage() {
           </ScrollReveal>
         </div>
       </SectionWrapper>
+      <CommunityInvitation title="An enduring part of our wider mission." href="/updates#awareness-together" label="Read our awareness story">
+        <p>Breast cancer awareness remains part of Phakama’s commitment to women’s wellbeing. Alongside our community meetings and clean-up campaigns, awareness activities keep space for conversations about health and support.</p>
+      </CommunityInvitation>
     </>
   );
 }

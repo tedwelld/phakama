@@ -40,7 +40,7 @@ function emailShell(title: string, body: string) {
       <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
         <tr>
           <td style="background:#0f1419;padding:32px 40px;text-align:center;">
-            <img src="cid:${LOGO_ATTACHMENT.cid}" width="180" height="180" alt="Phakama Women's Organization — Stronger Together" style="display:block;margin:0 auto 20px;background:#ffffff;border:0;" />
+            <img src="cid:${LOGO_ATTACHMENT.cid}" width="240" height="160" alt="Phakama Women's Organization" style="display:block;margin:0 auto 20px;border:0;" />
             <p style="margin:0;color:#0d9488;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;font-family:Arial,sans-serif;">
               ${siteConfig.location}
             </p>

@@ -10,18 +10,19 @@ export default function Logo({ layout = "horizontal", className }: LogoProps) {
   const compact = layout !== "horizontal";
 
   return (
+    <span className={cn("inline-flex shrink-0 items-center gap-3", className)}>
     <Image
-      src="/images/phakama-logo.png"
-      alt="Phakama Women's Organization — Stronger Together"
-      width={1254}
-      height={1254}
-      sizes={compact ? "72px" : "192px"}
+      src="/images/phakama-womens-logo-638d84bf.png"
+      alt="Phakama Women's Organization"
+      width={1536}
+      height={1024}
+      sizes={compact ? "96px" : "240px"}
       preload={compact}
       className={cn(
-        "shrink-0 rounded-sm bg-white object-contain",
-        compact ? "h-[72px] w-[72px]" : "h-48 w-48",
-        className,
+        "shrink-0 object-contain",
+        compact ? "h-16 w-24" : "h-40 w-60",
       )}
     />
+    </span>
   );
 }

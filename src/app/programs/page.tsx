@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import CommunityInvitation from "@/components/shared/CommunityInvitation";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -8,11 +9,7 @@ import SiteImage from "@/components/shared/SiteImage";
 import { outreachActivities, programs } from "@/data/programs";
 import { siteImages } from "@/data/images";
 
-export const metadata: Metadata = {
-  title: "Programs",
-  description:
-    "Discover Phakama's awareness campaigns, wellness workshops, community outreach, and volunteer programs.",
-};
+export const metadata = pageMetadata("/programs");
 
 export default function ProgramsPage() {
   return (
@@ -67,8 +64,8 @@ export default function ProgramsPage() {
       <SectionWrapper background="dark">
         <div className="mb-14 border-l-2 border-[var(--accent)] pl-6">
           <SectionLabel>From our region</SectionLabel>
-          <h2 className="mb-4 font-display text-3xl text-[var(--fg)]">Awareness in and around Dete</h2>
-          <p className="mb-5 max-w-2xl leading-relaxed text-[var(--fg-70)]">Read published reports about Phakama and community initiatives across Dete, Hwange, and Matabeleland North, or explore moments from our photo collection.</p>
+          <h2 className="mb-4 font-display text-3xl text-[var(--fg)]">Community action across Hwange</h2>
+          <p className="mb-5 max-w-2xl leading-relaxed text-[var(--fg-70)]">Read the stories behind our annual meetings, clean-up campaigns and awareness work. Discover how connection and practical action contribute to our wider purpose.</p>
           <div className="flex flex-wrap gap-6 text-sm text-[var(--accent)]">
             <Link href="/updates" className="hover:underline">Read community updates →</Link>
             <Link href="/gallery" className="hover:underline">Explore the gallery →</Link>
@@ -107,7 +104,7 @@ export default function ProgramsPage() {
               Bring Phakama to your community
             </h2>
             <p className="mx-auto mb-10 max-w-lg text-white/70">
-              Invite us for a health talk at your school, church, or workplace.
+              Discuss a community meeting, a clean-up campaign or an awareness activity in your area.
             </p>
             <Link
               href="/contact"
@@ -118,6 +115,9 @@ export default function ProgramsPage() {
           </ScrollReveal>
         </div>
       </section>
+      <CommunityInvitation title="Choose a cause close to your community." href="/get-involved" label="Explore ways to help">
+        <p>Connect through an annual meeting, take part in community care or help start a conversation about wellbeing. Contact us to discuss current opportunities, your location and the contribution you would like to make.</p>
+      </CommunityInvitation>
     </>
   );
 }

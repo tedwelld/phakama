@@ -38,10 +38,21 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   metadataBase: new URL(siteConfig.url),
-  alternates: { canonical: "/" },
+  // Each page declares its own canonical URL; never inherit the homepage here.
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+    other: process.env.BING_SITE_VERIFICATION
+      ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION }
+      : undefined,
+  },
   icons: {
-    icon: { url: "/images/phakama-logo.png", type: "image/png", sizes: "1254x1254" },
-    apple: { url: "/images/phakama-logo.png", type: "image/png", sizes: "1254x1254" },
+    icon: { url: "/images/phakama-womens-logo-638d84bf.png", type: "image/png", sizes: "1536x1024" },
+    apple: { url: "/images/phakama-womens-logo-638d84bf.png", type: "image/png", sizes: "1536x1024" },
   },
   openGraph: {
     type: "website",
@@ -49,14 +60,14 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: siteConfig.name,
     description: siteConfig.description,
-    locale: "en_US",
-    images: [{ url: "/images/phakama-logo.png", width: 1254, height: 1254, alt: siteConfig.name }],
+    locale: "en_ZW",
+    images: [{ url: "/images/phakama-womens-logo-638d84bf.png", width: 1536, height: 1024, alt: siteConfig.name }],
   },
   twitter: {
     card: "summary",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ["/images/phakama-logo.png"],
+    images: ["/images/phakama-womens-logo-638d84bf.png"],
   },
 };
 

@@ -186,5 +186,89 @@ body {
 }
 
 .pb-bottom-nav {
-  padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+.mobile-nav-fab,
+.mobile-nav-panel {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  html { scroll-padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px)); }
+
+  .mobile-nav-fab {
+    position: fixed;
+    left: calc(16px + env(safe-area-inset-left, 0px));
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 6px 24px #0003;
+    cursor: pointer;
+  }
+
+  .mobile-nav-fab .pi { font-size: 22px; }
+  .mobile-nav-fab:hover { background: var(--accent-dark); }
+
+  .mobile-nav-panel {
+    position: fixed;
+    inset: auto;
+    left: calc(16px + env(safe-area-inset-left, 0px));
+    bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+    width: 220px;
+    max-width: calc(100vw - 32px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+    max-height: calc(100dvh - 100px - env(safe-area-inset-bottom, 0px) - env(safe-area-inset-top, 0px));
+    margin: 0;
+    padding: 8px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: 1px solid var(--fg-10);
+    border-radius: 16px;
+    background: var(--bg);
+    color: var(--fg);
+    box-shadow: 0 12px 40px #0003;
+  }
+
+  .mobile-nav-panel:popover-open { display: block; }
+  .mobile-nav-panel::backdrop { background: transparent; }
+
+  .mobile-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 12px;
+    border-radius: 10px;
+    color: var(--fg-70);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+    transition: color .2s, background .2s;
+  }
+
+  .mobile-nav-link .pi { flex-shrink: 0; font-size: 20px; }
+  .mobile-nav-link:hover { background: var(--fg-05); color: var(--accent); }
+  .mobile-nav-link.is-active {
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    font-weight: 700;
+  }
+
+  .mobile-contact-button { right: calc(16px + env(safe-area-inset-right, 0px)); }
+  .mobile-contact-whatsapp { bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+  .mobile-contact-email { bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
+}
+
+.mobile-nav-fab:focus-visible,
+.mobile-nav-link:focus-visible,
+.mobile-contact-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }

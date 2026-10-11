@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
+import { siteConfig } from "@/data/siteConfig";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://www.phakamawomens.org/sitemap.xml",
+    rules: { userAgent: "*", allow: "/", disallow: "/api/" },
+    sitemap: `${siteConfig.url}/sitemap.xml`,
   };
 }

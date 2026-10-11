@@ -1,15 +1,12 @@
-import type { Metadata } from "next";
+import CommunityInvitation from "@/components/shared/CommunityInvitation";
+import { pageMetadata } from "@/lib/seo";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import SectionLabel from "@/components/ui/SectionLabel";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import ContactForm from "@/components/forms/ContactForm";
 import { siteConfig } from "@/data/siteConfig";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Get in touch with Phakama Women's Organization via WhatsApp, email, or our contact form.",
-};
+export const metadata = pageMetadata("/contact");
 
 export default function ContactPage() {
   const waHref = `https://wa.me/${siteConfig.whatsappNumber.replace(/\D/g, "")}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`;
@@ -33,9 +30,7 @@ export default function ContactPage() {
               </span>
             </h1>
             <p className="mb-10 max-w-md leading-relaxed text-[var(--fg-60)]">
-              Whether you have questions about breast cancer awareness, want to volunteer, or
-              would like to invite us for a health talk — reach out and we will respond within
-              24 hours.
+              Join a community meeting, support a clean-up campaign, discuss women&apos;s wellbeing or partner with Phakama. Tell us where you are in Hwange district and how you would like to get involved.
             </p>
 
             <div className="space-y-4">
@@ -50,7 +45,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="font-medium text-[var(--fg)]">Start a WhatsApp Chat</p>
-                  <p className="text-sm text-[var(--fg-50)]">Fastest response — usually within minutes</p>
+                  <p className="text-sm text-[var(--fg-50)]">Ask about activities and ways to take part</p>
                 </div>
               </a>
 
@@ -101,9 +96,9 @@ export default function ContactPage() {
               <p className="text-[var(--fg)]">{siteConfig.location}</p>
             </div>
             <div>
-              <p className="mb-3 text-xs tracking-widest text-[var(--accent)] uppercase">Response Time</p>
+              <p className="mb-3 text-xs tracking-widest text-[var(--accent)] uppercase">Plan an Activity</p>
               <p className="text-sm text-[var(--fg-70)]">
-                We respond to all enquiries within 24 hours. WhatsApp is fastest.
+                Share your location, the activity you have in mind and any proposed dates so we can discuss the next steps.
               </p>
             </div>
             <div>
@@ -123,6 +118,9 @@ export default function ContactPage() {
           </div>
         </ScrollReveal>
       </SectionWrapper>
+      <CommunityInvitation title="Every connection starts somewhere." href="/programs" label="See what brings us together">
+        <p>You do not need a finished proposal to get in touch. Whether you are a woman looking to connect with the group, a neighbour interested in community action or an organisation exploring a partnership, we welcome the conversation.</p>
+      </CommunityInvitation>
     </>
   );
 }

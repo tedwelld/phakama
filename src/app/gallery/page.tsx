@@ -1,14 +1,11 @@
-import type { Metadata } from "next";
+import CommunityInvitation from "@/components/shared/CommunityInvitation";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import PhotoGallery from "@/components/gallery/PhotoGallery";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import SectionLabel from "@/components/ui/SectionLabel";
 
-export const metadata: Metadata = {
-  title: "Community Gallery",
-  description: "Explore Phakama's collection of community gatherings, awareness activities, and moments together.",
-  alternates: { canonical: "/gallery" },
-};
+export const metadata = pageMetadata("/gallery");
 
 export default function GalleryPage() {
   return (
@@ -24,6 +21,9 @@ export default function GalleryPage() {
       <SectionWrapper background="charcoal">
         <PhotoGallery />
       </SectionWrapper>
+      <CommunityInvitation title="Behind every gathering is a community." href="/updates" label="Read the initiative stories">
+        <p>Our photo collection reflects the people and connections at the heart of Phakama. Read our initiative stories for a broader view of annual meetings, clean-up campaigns and awareness work across Hwange district.</p>
+      </CommunityInvitation>
     </>
   );
 }
