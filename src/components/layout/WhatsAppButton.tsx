@@ -25,9 +25,9 @@ export default function WhatsAppButton() {
     <a
       href={`mailto:${siteConfig.email}`}
       aria-label="Email Phakama"
-      className="mobile-contact-button mobile-contact-email fixed z-50 flex h-11 w-11 items-center justify-center rounded-full border border-[var(--fg-10)] bg-[var(--bg)]/95 text-[var(--accent)] shadow-lg backdrop-blur-md lg:hidden"
+      className="mobile-contact-button mobile-contact-email fixed z-50 flex h-11 w-11 items-center justify-center rounded-full border border-[var(--fg-10)] bg-[var(--bg)]/95 text-[var(--accent)] shadow-lg backdrop-blur-md lg:right-8 lg:bottom-26 lg:h-14 lg:w-14"
     >
-      <i className="pi pi-envelope text-xl" aria-hidden="true" />
+      <i className="pi pi-envelope text-xl lg:text-2xl" aria-hidden="true" />
     </a>
     </>
   );

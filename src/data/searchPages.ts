@@ -2,6 +2,12 @@ import { siteImages } from "./images";
 
 // Keep the sitemap and each page's search metadata on the same canonical URLs.
 export const searchPages = {
+  "/terms-and-conditions": {
+    title: "Terms & Conditions",
+    description: "Read the guidelines for using Phakama’s website, sharing content, health awareness information and participating in community activities.",
+    image: siteImages.homepage,
+    imageAlt: "Phakama community gathering in Hwange",
+  },
   "/": {
     title: "Phakama Women's Organization | Hwange, Zimbabwe",
     description: "Phakama brings women together in Hwange district, Zimbabwe through community meetings, clean-up campaigns, women's wellbeing and breast cancer awareness.",

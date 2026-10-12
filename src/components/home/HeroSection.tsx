@@ -32,7 +32,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative flex h-screen min-h-[600px] items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-svh items-center justify-center overflow-hidden pt-40 pb-44 lg:pb-32">
       <SiteImage
         src={siteImages.homepage}
         alt="Community group gathered at Hwange Safari Lodge"
@@ -75,7 +75,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.4, duration: 0.6 }}
-          className="flex flex-col items-center justify-center gap-4 sm:flex-row"
+          className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap"
         >
           <Link
             href="/programs"

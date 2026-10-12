@@ -88,7 +88,10 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[var(--fg-10)] pt-8 text-xs text-[var(--fg-30)] sm:flex-row">
           <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link href="/terms-and-conditions" className="hover:text-[var(--fg-60)]">
+              Terms &amp; Conditions
+            </Link>
             <Link href="/about" className="hover:text-[var(--fg-60)]">
               About
             </Link>

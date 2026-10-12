@@ -4,6 +4,7 @@ import "./globals.css";
 import "primeicons/primeicons.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import TermsBanner from "@/components/shared/TermsBanner";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import BottomNav from "@/components/layout/BottomNav";
 import LenisProvider from "@/components/layout/LenisProvider";
@@ -91,6 +92,7 @@ export default function RootLayout({
           <LenisProvider>
             <Navbar />
             <main className="pb-bottom-nav lg:pb-0">{children}</main>
+            <TermsBanner />
             <Footer />
             <WhatsAppButton />
             <BottomNav />
